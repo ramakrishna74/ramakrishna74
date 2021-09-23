@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+ 
+				<title>Users Data</title>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/r-2.1.0/datatables.min.css" />
+
+<script type="text/javascript"
+	src="https://cdn.datatables.net/v/dt/jqc-1.12.3/dt-1.10.12/r-2.1.0/datatables.min.js"></script>
+
+
+</head>
+<body>
+<h3>Users Data</h3>
+<hr>
+<table id="example" class="display nowrap" cellspacing="5"
+				width="100%">
+<thead>
+<tr>
+<th>id</th>
+<th>designation</th>
+<th>first_name</th>
+<th>last_name</th>
+<th>email</th>
+<th>country_code</th>
+<th>mobile</th>
+<th>gender</th>
+<th>username</th>
+<th>specialization</th>
+<th>consultation_fees</th>
+<th>experience</th>
+<th>qualification</th>
+<th>registration_number</th>
+<th>street_address</th>
+<th>uhid</th>
+<th>weight_type</th>
+<th>zip_code</th>
+<th>state_id</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="tempUsers:${users}">
+	<td >{tempUsers.id}<td/>
+	<td >{tempUsers.designation}<td/>
+	<td >{tempUsers.first_name}<td/>
+	<td >{tempUsers.last_name}<td/>
+	<td >{tempUsers.email}<td/>
+	<td >{tempUsers.country_code}<td/>
+	<td >{tempUsers.mobile}<td/>
+	<td >{tempUsers.gender}<td/>
+	<td >{tempUsers.username}<td/>
+	<td >{tempUsers.specialization}<td/>
+	<td >{tempUsers.consultation_fees}<td/>
+	<td >{tempUsers.experience}/>
+	<td >{tempUsers.qualification}<td/>
+	<td >{tempUsers.registration_number}<td/>
+	<td >{tempUsers.street_address}<td/>
+	<td >{tempUsers.uhid}<td/>
+	<td >{tempUsers.weight_type}<td/>
+	<td >{tempUsers.zip_code}<td/>
+	<td >{tempUsers.state_id}<td/>
+	
+	</tr>
+	
+</tbody>
+</table>
+</body>
+<script>
+$(document).ready(function() {
+	var table = $('#example').DataTable( {
+		responsive: {}
+    } );// end of DataTable
+
+
+} );
+
+
+</script>
+
+
+</html>
